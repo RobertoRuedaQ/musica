@@ -1,0 +1,10 @@
+<h3><%= @artist.name %> Albums</h3>
+<div>
+  <% @artist.albums.each do |album| %>
+    <article>
+      <h4><%= album.name %></h4>
+      <img src="<%= album.image_url %>" alt="<%= album.name %>" width="250" height="180">
+      <p>Released_at: <%= album.released_at %></p>
+    </article>
+  <% end %>
+</div>

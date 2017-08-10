@@ -15,8 +15,8 @@ ActiveRecord::Schema.define(version: 20170512002644) do
   create_table "albums", force: :cascade do |t|
     t.string   "name"
     t.string   "image_url"
-    t.string   "released_at"
-    t.string   "integer"
+    t.datetime "released_at"
+    t.integer  "artist_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20170512002644) do
     t.string   "name"
     t.integer  "number"
     t.string   "preview_url"
+    t.integer  "album_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
